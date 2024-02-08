@@ -65,9 +65,11 @@ public class FortuneTellerFrame extends JFrame {
 
     private void createTopPanel() {
         iconPnl = new JPanel();
-        icon = new ImageIcon("src/Teller1.jpg");
+        icon = new ImageIcon("src/Teller.jpg");
+        Image image = icon.getImage(). getScaledInstance(40,40,Image.SCALE_SMOOTH);
+        ImageIcon resizedIcon = new ImageIcon(image);
 
-        titleLbl = new JLabel("Fortune Teller", icon, JLabel.CENTER);
+        titleLbl = new JLabel("Fortune Teller", resizedIcon, JLabel.CENTER);
         titleLbl.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 
         titleLbl.setVerticalTextPosition(JLabel.BOTTOM);
